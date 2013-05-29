@@ -1,0 +1,28 @@
+﻿Build started 2013-05-29 16:22:03.
+     1>Project "C:\Users\Darek\Documents\Visual Studio 2010\Projects\lambda\lambda\lambda.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\lambda.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Python27\DLLs /IC:\Python27\include /IC:\Python27\Lib /IC:\Python27\libs /IC:\boost_1_47_0\boost_1_47_0 /IC:\boost_1_47_0\boost_1_47_0\libs /IC:\boost_1_47_0\boost_1_47_0\lib /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt lambda.cpp
+         lambda.cpp
+     1>c:\users\darek\documents\visual studio 2010\projects\lambda\lambda\lambda.cpp(59): warning C4101: 'e' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Darek\Documents\Visual Studio 2010\Projects\lambda\Debug\lambda.exe" /NOLOGO /LIBPATH:C:\Python27\DLLs /LIBPATH:C:\Python27\Lib /LIBPATH:C:\Python27\libs /LIBPATH:C:\boost_1_47_0\boost_1_47_0 /LIBPATH:C:\boost_1_47_0\boost_1_47_0\libs /LIBPATH:C:\boost_1_47_0\boost_1_47_0\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\lambda.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Darek\Documents\Visual Studio 2010\Projects\lambda\Debug\lambda.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Darek\Documents\Visual Studio 2010\Projects\lambda\Debug\lambda.lib" /MACHINE:X86 Debug\AgileManager.obj
+         Debug\Item.obj
+         Debug\ItemFactory.obj
+         Debug\lambda.obj
+         Debug\Method.obj
+         Debug\MethodFactory.obj
+         Debug\PythonAdapter.obj
+         LINK : C:\Users\Darek\Documents\Visual Studio 2010\Projects\lambda\Debug\lambda.exe not found or not built by the last incremental link; performing full link
+         lambda.vcxproj -> C:\Users\Darek\Documents\Visual Studio 2010\Projects\lambda\Debug\lambda.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Darek\Documents\Visual Studio 2010\Projects\lambda\Debug\lambda.exe;#1" /manifest Debug\lambda.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\lambda.unsuccessfulbuild".
+         Touching "Debug\lambda.lastbuildstate".
+     1>Done Building Project "C:\Users\Darek\Documents\Visual Studio 2010\Projects\lambda\lambda\lambda.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.31
