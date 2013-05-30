@@ -64,7 +64,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AgileManager.cpp" />
+    <ClCompile Include="RemoteAppManager.cpp" />
+    <ClCompile Include="FrontEnd.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="ItemFactory.cpp" />
     <ClCompile Include="JSONReader.cpp" />
@@ -78,13 +79,15 @@
     <None Include="Asana.py" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AgileManager.h" />
+    <ClInclude Include="RemoteAppManager.h" />
+    <ClInclude Include="FrontEnd.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemFactory.h" />
     <ClInclude Include="JSONReader.h" />
     <ClInclude Include="Method.h" />
     <ClInclude Include="MethodFactory.h" />
     <ClInclude Include="PythonAdapter.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="ScriptManager.h" />
   </ItemGroup>
   <ItemGroup>

@@ -10,13 +10,17 @@ asana_url = "https://app.asana.com/api/1.0/"
 
 
 methods = "[{"
-methods +=  "\"item\":"
+methods +=  "\"method\":"
 methods += "[\"projects\", \"param\"]},{"
-methods +=  "\"item\":"
+methods +=  "\"method\":"
 methods += "[\"task\", \"task\", \"param\"]}]" 
 
 
-items = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>"
+items  = "[{"
+items +=  "\"item\":"
+items += "[\"projects\", \"param\"]},{"
+items +=  "\"item\":"
+items += "[\"task\", \"task\", \"param\"]}]" 
 
 
 ''''users"

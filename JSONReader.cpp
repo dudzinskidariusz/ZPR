@@ -48,8 +48,9 @@ Item* JSONReader::readItem(Value value){
 	for ( int j = 1; j < (int)value.size(); j++ ){
 			name = value[j].asString();
 			item->addParam(name);
-			std::cout << item->getName() << " : "<< item->getParamNames() << endl; 
+			
 		}
+	//std::cout << "item readed "<< item->getName() << " : "<< item->getParamNames() << endl; 
 	return item;
 }
 
@@ -101,7 +102,8 @@ Method* JSONReader::readMethod(Value value){
 	for ( int j = 1; j < (int)value.size(); j++ ){
 			name = value[j].asString();
 			method->addParam(name);
-			std::cout << method->getName() << " : "<< method->getParamNames() << endl; 
-		}
+	}
+	//std::cout << "method readed from file"<< method->getName() << " : "<< method->getParamNames() << endl; 
+		
 	return method;
 }

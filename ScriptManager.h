@@ -5,13 +5,18 @@
 namespace fs = ::boost::filesystem;
 using namespace std;
 
+typedef vector<string> StringVector;
+
 class ScriptManager
 {
+private:
+	StringVector* vect;
+	StringVector* get_all(const fs::path& root);
 public:
-	ScriptManager(void);
+	ScriptManager(string fullPath);
 	~ScriptManager(void);
 
-	string getNames(string path);
-	void get_all(const fs::path& root,const string& ext);
+	StringVector* getNames();
+	
 };
 

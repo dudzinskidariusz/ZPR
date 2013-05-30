@@ -1,10 +1,9 @@
 #include "MethodFactory.h"
-#include "Method.h"
+
 #include <boost\unordered_map.hpp>
 
-using namespace std;
-
 typedef boost::unordered_map<string, Method*> MethodsMap;
+typedef vector<string> StringVector;
 
 MethodFactory::MethodFactory(void){
 	methods = new MethodsMap();
@@ -22,4 +21,12 @@ bool MethodFactory::registerMethod(Method* method){
 
 Method* MethodFactory::create(string name){
 	return methods->find(name)->second->clone();
+}
+
+StringVector* MethodFactory::getNames(){
+	StringVector* stringVector = new StringVector();
+	for(MethodsMap::iterator it = methods->begin(); it!= methods->end(); ++it){
+		stringVector->push_back(it->first);
+	}
+	return stringVector;
 }
