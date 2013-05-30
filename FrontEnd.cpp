@@ -13,10 +13,11 @@ FrontEnd::~FrontEnd(void)
 	delete remoteAppManager;
 }
 
-AppOperation FrontEnd::translateOperation(string opp){
-		OperationMap oppMap;
+FrontAppOperation FrontEnd::translateOperation(string opp){
+		FrontOperationMap oppMap;
 		oppMap["load"] = Load;
-		oppMap["exit"] = Exit;
+		oppMap["reload"] = Reload;
+		oppMap["exit"] = ExitApp;
 
 		return oppMap[opp];
 }
@@ -41,9 +42,12 @@ void FrontEnd::start(string path){
 
 		switch (translateOperation(operation)){
 		case Load:
-				execLoad("Asana");//args[1]);
+			execLoad("Asana");//args[1]);
 			break;
-		case Exit:
+		case Reload:
+			scriptNames = script->getNames();
+		break;
+		case ExitApp:
 			exit = true;
 			break;
 		default:
@@ -75,6 +79,7 @@ void FrontEnd::execLoad(string app){
 vector<string> FrontEnd::readConsoleStrings() {
 	string text;
 	char ch= ' ';
+	cout << ">";
 	getline(cin,text);
 	string next;
     vector<string> result;

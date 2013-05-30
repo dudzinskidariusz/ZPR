@@ -11,12 +11,14 @@ asana_url = "https://app.asana.com/api/1.0/"
 
 methods = "[{"
 methods +=  "\"method\":"
-methods += "[\"projects\", \"param\"]},{"
+methods += "[\"getUsers\", \"API_KEY\"]},{"
 methods +=  "\"method\":"
-methods += "[\"task\", \"task\", \"param\"]}]" 
+methods += "[\"getUser\", \"id\", \"API_KEY\"]}]" 
 
 
 items  = "[{"
+items +=  "\"item\":"
+items += "[\"authentication\", \"API_KEY\", \"login\"]},{"
 items +=  "\"item\":"
 items += "[\"projects\", \"param\"]},{"
 items +=  "\"item\":"

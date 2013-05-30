@@ -16,7 +16,7 @@ RemoteAppManager::~RemoteAppManager(void)
 	delete itemFactory ;
 	delete methodFactory;
 	delete pythonAdapter;
-	
+	delete authReq;
 }
 
 AppOperation RemoteAppManager::translateOperation(string opp){
@@ -28,23 +28,35 @@ AppOperation RemoteAppManager::translateOperation(string opp){
 }
 
 void RemoteAppManager::initFactories(){
-	ItemVector* items = pythonAdapter->getItemPrototypes();
-	itemFactory = new ItemFactory();
-	for(ItemVector::iterator it = items->begin(); it!= items->end(); ++it){
-		itemFactory->registerItem((*it));
-	}
-	MethodVector* methods = pythonAdapter->getMethodPrototypes();
-	methodFactory = new MethodFactory();
-	for(MethodVector::iterator it = methods->begin(); it!= methods->end(); ++it){
-		methodFactory->registerMethod((*it));
-	}
+	try{
+		ItemVector* items = pythonAdapter->getItemPrototypes();
+		itemFactory = new ItemFactory();
+		for(ItemVector::iterator it = items->begin(); it!= items->end(); ++it){
+			itemFactory->registerItem((*it));
+		}
+		MethodVector* methods = pythonAdapter->getMethodPrototypes();
+		methodFactory = new MethodFactory();
+		for(MethodVector::iterator it = methods->begin(); it!= methods->end(); ++it){
+			methodFactory->registerMethod((*it));
+		}
 	
+		authReq = itemFactory->create("authentication");
+		}catch(ScriptException &e){
+			cout << e.GetError() << endl;
+			exit = true;
+	}
 }
 
 void RemoteAppManager::start(){
+	if(exit){
+		return;
+	}
 	exit = false;
 	//string text;
 	cout <<endl << "-----< " << appName << " >----"<< endl;
+	cout << "User Credentials:" << endl;
+
+	authentication();
 
 	while(!exit) {
 		cout << endl;
@@ -67,6 +79,19 @@ void RemoteAppManager::start(){
 	}
 
 }
+void RemoteAppManager::authentication(){
+	ItemMap* items = authReq->getParams();
+	for(ItemMap::iterator it = items->begin(); it!= items->end(); ++it){
+		cout << endl << (*it).first << ": ";
+		StringVector s;
+		s = readConsoleStrings();
+		(*it).second=s[0];
+	}
+	for(ItemMap::iterator it = items->begin(); it!= items->end(); ++it){
+		cout << endl << (*it).first << " : "<< (*it).second;
+	}
+}
+
 
 void RemoteAppManager::printMethods(){
 	StringVector* methods = methodFactory->getNames();
@@ -80,6 +105,7 @@ void RemoteAppManager::printMethods(){
 StringVector RemoteAppManager::readConsoleStrings() {
 	string text;
 	char ch= ' ';
+	cout << endl <<">";
 	getline(cin,text);
 	string next;
     StringVector result;

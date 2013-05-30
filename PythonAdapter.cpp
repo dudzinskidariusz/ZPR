@@ -21,6 +21,31 @@ ItemVector* PythonAdapter::getItemPrototypes(){
 	string API_KEY="1jUZqKkm.nz1jyrRsBWNkpxakpkfYinT";
 	object app = import(name);
 	object items = app.attr("items");
+	string str = extract<string>(items);
+	Py_Finalize();
+
+	JSONReader* reader = new JSONReader();
+	return reader->readItems(str);
+}
+
+MethodVector* PythonAdapter::getMethodPrototypes(){
+
+	Py_Initialize();
+
+	boost::python::str name (appName);
+	//string API_KEY="1jUZqKkm.nz1jyrRsBWNkpxakpkfYinT";
+	object app = import(name);
+	object items = app.attr("methods");
+	string str = extract<string>(items);
+	
+	Py_Finalize();
+
+	JSONReader* reader = new JSONReader();
+	return reader->readMethods(str);
+}
+
+void PythonAdapter::exec(StringVector params){
+	// TO-DO
 	/*
 		try
 	{
@@ -49,7 +74,7 @@ ItemVector* PythonAdapter::getItemPrototypes(){
 	//boost::python::exec("import Asana");
 	//PyRun_SimpleString("import Asana");
 	////std::cout << 
-		string str = extract<string>(items);
+	//	string str = extract<string>(items);
 //cout << str << endl << endl;
 	//PyRun_SimpleString("import Asana");
 	//
@@ -57,28 +82,4 @@ ItemVector* PythonAdapter::getItemPrototypes(){
 		//object result = exec("Asana.getMethods()");
 	//PyRun_SimpleString("Asana.getMethods()");
 	//string res = extract<string>(result);
-	Py_Finalize();
-
-	JSONReader* reader = new JSONReader();
-	return reader->readItems(str);
-}
-
-MethodVector* PythonAdapter::getMethodPrototypes(){
-
-	Py_Initialize();
-
-	boost::python::str name (appName);
-	//string API_KEY="1jUZqKkm.nz1jyrRsBWNkpxakpkfYinT";
-	object app = import(name);
-	object items = app.attr("methods");
-	string str = extract<string>(items);
-	
-	Py_Finalize();
-
-	JSONReader* reader = new JSONReader();
-	return reader->readMethods(str);
-}
-
-void PythonAdapter::exec(StringVector params){
-	// TO-DO
 }

@@ -10,17 +10,18 @@
 
 using namespace std;
 //using namespace boost::python;
-static enum AppOperation { 
+static enum FrontAppOperation { 
 	Load, 
-	Exit };
+	Reload,
+	ExitApp };
 
 typedef vector<string> StringVector;
-typedef boost::unordered_map<string, AppOperation> OperationMap;
+typedef boost::unordered_map<string, FrontAppOperation> FrontOperationMap;
 
 class FrontEnd
 {
 private:
-	AppOperation translateOperation(string opp);
+	FrontAppOperation translateOperation(string opp);
 	vector<string> split(const string& str, const char& ch);
 	void toLoad();
 	vector<string> readConsoleStrings();

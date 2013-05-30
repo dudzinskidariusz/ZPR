@@ -19,6 +19,9 @@
     <Filter Include="Source Files\ManagableItems">
       <UniqueIdentifier>{5e380c3d-d8f5-44b4-a468-1c5e826575ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Exceptions">
+      <UniqueIdentifier>{55c8f111-4f67-4167-a848-f9eb7013d61c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lambda.cpp">
@@ -82,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="RemoteAppManager.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptException.h">
+      <Filter>Header Files\Exceptions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

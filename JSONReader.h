@@ -5,6 +5,7 @@
 #include "Method.h"
 #include "Item.h"
 #include "json.h"
+#include "ScriptException.h"
 
 using namespace Json;
 
