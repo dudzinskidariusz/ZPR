@@ -1,11 +1,11 @@
 #include "Method.h"
 #include <boost/unordered_map.hpp>
 
-typedef boost::unordered_map<string, Item*> map;
+typedef boost::unordered_map<string, Item*> MethodMap;
 
-Method::Method(void){
+Method::Method(string name){
 	this->name = name;
-	//params;
+	params;
 }
 
 Method* Method::clone() const{
@@ -40,4 +40,12 @@ Item* Method::getParam(string key){
 
 boost::unordered_map<string, Item*>* Method::getParams(){
 	return &params;
+}
+
+string Method::getParamNames(){
+	string names;
+	for(boost::unordered_map<string, Item*>::iterator it =params.begin();it != params.end(); ++it){
+		names = " " + it->first + " ";
+	}
+	return names;
 }

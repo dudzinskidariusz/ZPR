@@ -1,14 +1,14 @@
-/*
+
 #include "ItemFactory.h"
 #include "Item.h"
 #include <boost\unordered_map.hpp>
 
 using namespace std;
 
-typedef boost::unordered_map<string, Item*> items_map;
+typedef boost::unordered_map<string, Item*> ItemsMap;
 
 ItemFactory::ItemFactory(void){
-	items = new items_map();
+	items = new ItemsMap();
 }
 
 ItemFactory::~ItemFactory(void){
@@ -16,9 +16,12 @@ ItemFactory::~ItemFactory(void){
 }
 
 bool ItemFactory::registerItem(Item* item){
-	items->insert(make_pair(&(item->getName()), &item));
+	string name = item->getName();
+	items->emplace(name, item);
+	//items->insert(make_pair(&(item->getName()), &item));
+	return true;
 }
 
 Item* ItemFactory::create(string name){
 	return items->find(name)->second->clone();
-}*/
+}

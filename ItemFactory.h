@@ -1,15 +1,15 @@
-/*#pragma once
+#pragma once
 #include "Item.h"
 #include <boost\unordered_map.hpp>
 
 using namespace std;
 
-typedef boost::unordered_map<string, Item*> items_map;
+typedef boost::unordered_map<string, Item*> ItemsMap;
 
 class ItemFactory
 {
 private:
-	items_map* items;
+	ItemsMap* items;
 public:
 	ItemFactory(void);
 	~ItemFactory(void);
@@ -17,4 +17,4 @@ public:
 	bool registerItem(Item* item);
 	Item* create(string name);
 };
-*/
+

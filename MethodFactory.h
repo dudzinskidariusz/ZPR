@@ -4,11 +4,11 @@
 
 using namespace std;
 
-typedef boost::unordered_map<string, Method> Methods_map;
+typedef boost::unordered_map<string, Method*> MethodsMap;
 
 class MethodFactory{
 private:
-	Methods_map* methods;
+	MethodsMap* methods;
 public:
 	MethodFactory(void);
 	~MethodFactory(void);

@@ -5,11 +5,11 @@ using namespace std;
 
 class Item
 {
-	typedef boost::unordered_map<string, string> map;
+	typedef boost::unordered_map<string, string> ItemMap;
 
 private:
 	string name;
-	map params;
+	ItemMap params;
 public:
 	Item(string name);
 	Item(const Item& i);
@@ -18,17 +18,11 @@ public:
 
 	void setName(string name);
 	string getName();
-	void addParam(string key, string value);
+	void addParam(string key, string value="");
 	string getParam(string key);
-	map* getParams();
+	ItemMap* getParams();
+	string getParamNames();
 
-	struct name_hash  
-    { 
-       size_t operator() (std::string* name)
-       {
-           std::hash<std::string> h;
-           return h(*name);
-       }
-    };
+	
 };
 

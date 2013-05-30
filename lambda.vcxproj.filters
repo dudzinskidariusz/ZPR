@@ -13,21 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\ManagableItems">
+      <UniqueIdentifier>{34a8989d-b49d-4b4a-9704-9799601218b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ManagableItems">
+      <UniqueIdentifier>{5e380c3d-d8f5-44b4-a468-1c5e826575ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lambda.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ItemFactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Method.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MethodFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AgileManager.cpp">
@@ -36,24 +30,48 @@
     <ClCompile Include="PythonAdapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files\ManagableItems</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemFactory.cpp">
+      <Filter>Source Files\ManagableItems</Filter>
+    </ClCompile>
+    <ClCompile Include="Method.cpp">
+      <Filter>Source Files\ManagableItems</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodFactory.cpp">
+      <Filter>Source Files\ManagableItems</Filter>
+    </ClCompile>
+    <ClCompile Include="JSONReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Method.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ItemFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MethodFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AgileManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PythonAdapter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files\ManagableItems</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemFactory.h">
+      <Filter>Header Files\ManagableItems</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodFactory.h">
+      <Filter>Header Files\ManagableItems</Filter>
+    </ClInclude>
+    <ClInclude Include="Method.h">
+      <Filter>Header Files\ManagableItems</Filter>
+    </ClInclude>
+    <ClInclude Include="JSONReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

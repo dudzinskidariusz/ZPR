@@ -6,12 +6,12 @@ using namespace std;
 
 class Method
 {
-	typedef boost::unordered_map<string, Item*> map;
+	typedef boost::unordered_map<string, Item*> MethodMap;
 private:
 	string name;
-	map params;
+	MethodMap params;
 public:
-	Method(void);
+	Method(string name);
 	Method(const Method& i);
 	Method* clone() const;
 	~Method(void);
@@ -19,9 +19,10 @@ public:
 	bool Execute();
 	void setName(string name);
 	string getName();
-	void addParam(string key, Item* value);
+	void addParam(string key, Item* value = 0);
 	Item* getParam(string key);
-	map* getParams();
+	MethodMap* getParams();
+	string getParamNames();
 	struct name_hash  
     { 
        size_t operator() (std::string* name)

@@ -7,20 +7,34 @@ import requests, json
 
 API_KEY="1jUZqKkm.nz1jyrRsBWNkpxakpkfYinT"
 asana_url = "https://app.asana.com/api/1.0/"
+
+
+methods = "[{"
+methods +=  "\"item\":"
+methods += "[\"projects\", \"param\"]},{"
+methods +=  "\"item\":"
+methods += "[\"task\", \"task\", \"param\"]}]" 
+
+
+items = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>"
+
+
 ''''users"
 '''
 #data = json.dumps({'name':'test', 'description':'some test repo'}) 
 
-def getMethods():
-	methods =1;
-	#methods = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>"
-	#methods += "<methods>"
-	#methods += "<method>"
-	#methods += "<name>\"getUsers\"</name>"
-	#methods += "<param>\"api_key\"</param>"
-	#methods += "</method>"
-	#methods += "</methods>"
-	return methods
+class M:
+	def __getitem__():
+		methods =1;
+		#methods = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>"
+		#methods += "<methods>"
+		#methods += "<method>"
+		#methods += "<name>\"getUsers\"</name>"
+		#methods += "<param>\"api_key\"</param>"
+		#methods += "</method>"
+		#methods += "</methods>"
+		return methods
+		
 
 def getUsers(api_key):
     r = requests.get((asana_url+"users"), auth=(API_KEY, "" ))

@@ -1,4 +1,0 @@
-ZPR
-===
-
-academic project 

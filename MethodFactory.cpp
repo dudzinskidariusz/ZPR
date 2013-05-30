@@ -3,21 +3,23 @@
 #include <boost\unordered_map.hpp>
 
 using namespace std;
-/*
-typedef boost::unordered_map<string, Method> Methods_map;
+
+typedef boost::unordered_map<string, Method*> MethodsMap;
 
 MethodFactory::MethodFactory(void){
-	methods = new Methods_map();
+	methods = new MethodsMap();
 }
 
 MethodFactory::~MethodFactory(void){
 	delete methods;
 }
 
-bool MethodFactory::registerMethod(Method* Method){
-	methods->insert(make_pair(&(Method->getName()), &Method));
+bool MethodFactory::registerMethod(Method* method){
+	string name = method->getName();
+	methods->emplace(name,method);
+	return true;
 }
 
 Method* MethodFactory::create(string name){
-	return methods->find(name)->second.clone();
-}*/
+	return methods->find(name)->second->clone();
+}
