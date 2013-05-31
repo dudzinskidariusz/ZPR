@@ -1,4 +1,4 @@
-#include "FrontEnd.h"
+#include "frontend.h"
 
 
 FrontEnd::FrontEnd(void)

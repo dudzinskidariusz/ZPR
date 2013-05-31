@@ -1,4 +1,4 @@
-#include "Item.h"
+#include "item.h"
 #include <boost/unordered_map.hpp>
 
 Item::Item(string name){
@@ -36,14 +36,5 @@ string Item::getParam(string key){
 
 boost::unordered_map<string, string>* Item::getParams(){
 	return &params;
-}
-
-string Item::getParamNames(){
-	string names;
-	for(boost::unordered_map<string, string>::iterator it =params.begin();it != params.end(); ++it){
-		names = " " + it->first + " ";
-	}
-	return names;
-
 }
 

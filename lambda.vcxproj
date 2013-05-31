@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E86C01F3-0CFB-44A8-8585-63B07255374C}</ProjectGuid>
     <RootNamespace>lambda</RootNamespace>
+    <ProjectName>pmapp</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -69,7 +70,7 @@
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="ItemFactory.cpp" />
     <ClCompile Include="JSONReader.cpp" />
-    <ClCompile Include="lambda.cpp" />
+    <ClCompile Include="pmapp.cpp" />
     <ClCompile Include="Method.cpp" />
     <ClCompile Include="MethodFactory.cpp" />
     <ClCompile Include="PythonAdapter.cpp" />
@@ -79,17 +80,17 @@
     <None Include="Asana.py" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RemoteAppManager.h" />
-    <ClInclude Include="FrontEnd.h" />
+    <ClInclude Include="remoteappmanager.h" />
+    <ClInclude Include="frontend.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemFactory.h" />
     <ClInclude Include="JSONReader.h" />
     <ClInclude Include="Method.h" />
     <ClInclude Include="MethodFactory.h" />
-    <ClInclude Include="PythonAdapter.h" />
+    <ClInclude Include="pythonadapter.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="ScriptManager.h" />
-    <ClInclude Include="ScriptException.h" />
+    <ClInclude Include="scriptexception.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\json-cpp-master\makefiles\vs71\lib_json.vcxproj">

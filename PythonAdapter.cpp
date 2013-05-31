@@ -1,4 +1,4 @@
-#include "PythonAdapter.h"
+#include "pythonadapter.h"
 
 
 PythonAdapter::PythonAdapter(string appName)
@@ -18,7 +18,7 @@ ItemVector* PythonAdapter::getItemPrototypes(){
 	Py_Initialize();
 
 	boost::python::str name (appName);
-	string API_KEY="1jUZqKkm.nz1jyrRsBWNkpxakpkfYinT";
+	//string API_KEY="1jUZqKkm.nz1jyrRsBWNkpxakpkfYinT";
 	object app = import(name);
 	object items = app.attr("items");
 	string str = extract<string>(items);

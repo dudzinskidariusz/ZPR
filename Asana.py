@@ -29,17 +29,17 @@ items += "[\"task\", \"task\", \"param\"]}]"
 '''
 #data = json.dumps({'name':'test', 'description':'some test repo'}) 
 
-class M:
-	def __getitem__():
-		methods =1;
-		#methods = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>"
-		#methods += "<methods>"
-		#methods += "<method>"
-		#methods += "<name>\"getUsers\"</name>"
-		#methods += "<param>\"api_key\"</param>"
-		#methods += "</method>"
-		#methods += "</methods>"
-		return methods
+
+def getMethods	():
+	#methods =1
+	methods = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>"
+	methods += "<methods>"
+	methods += "<method>"
+	#methods += "<name>\"getUsers\"</name>"
+	#methods += "<param>\"api_key\"</param>"
+	#methods += "</method>"
+	#methods += "</methods>"
+	return methods
 		
 
 def getUsers(api_key):
@@ -161,6 +161,6 @@ def postProject(name, workspace, notes,  api_key):
 #test_workspace = 4653032378172
 
 #postProject('test posta', test_workspace, 'test','')
-
+#postProject('test posta', 4653032378172, 'test','')
 
 

@@ -1,11 +1,11 @@
-#include "RemoteAppManager.h"
+#include "remoteappmanager.h"
 
 
 RemoteAppManager::RemoteAppManager(string appName)
 {
 	this->appName = appName;
 	pythonAdapter = new PythonAdapter(appName);
-	
+	exit =false;
 	initFactories();
 	
 }
@@ -42,13 +42,14 @@ void RemoteAppManager::initFactories(){
 	
 		authReq = itemFactory->create("authentication");
 		}catch(ScriptException &e){
-			cout << e.GetError() << endl;
+			cout << e.getError() << endl;
 			exit = true;
 	}
 }
 
 void RemoteAppManager::start(){
 	if(exit){
+		cout << "exit is true";
 		return;
 	}
 	exit = false;

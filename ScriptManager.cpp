@@ -1,4 +1,4 @@
-#include "ScriptManager.h"
+#include "scriptmanager.h"
 #include <boost/filesystem.hpp>
 #include "boost/filesystem/operations.hpp"
 #include "boost/filesystem/path.hpp"
@@ -8,9 +8,9 @@ namespace fs = ::boost::filesystem;
 
 ScriptManager::ScriptManager(string fullPath)
 {
-	int pos = fullPath.find("lambda.exe");
+	int pos = fullPath.find("pmapp.exe");
 	fullPath = fullPath.substr(0, pos);
-	vect = get_all(fullPath);
+	vect = getAll(fullPath);
 }
 
 
@@ -23,7 +23,7 @@ StringVector* ScriptManager::getNames(){
 	return vect;
 }
 
-StringVector* ScriptManager::get_all(const fs::path& root)
+StringVector* ScriptManager::getAll(const fs::path& root)
 {  
 	if (!fs::exists(root)) {
 		return 0;

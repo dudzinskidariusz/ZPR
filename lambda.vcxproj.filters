@@ -24,9 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lambda.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="PythonAdapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,14 +51,11 @@
     <ClCompile Include="RemoteAppManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pmapp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PythonAdapter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Header Files\ManagableItems</Filter>
-    </ClInclude>
     <ClInclude Include="ItemFactory.h">
       <Filter>Header Files\ManagableItems</Filter>
     </ClInclude>
@@ -71,23 +65,29 @@
     <ClInclude Include="Method.h">
       <Filter>Header Files\ManagableItems</Filter>
     </ClInclude>
-    <ClInclude Include="JSONReader.h">
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scriptexception.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="remoteappmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frontend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pythonadapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ScriptManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FrontEnd.h">
+    <ClInclude Include="JSONReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RemoteAppManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ScriptException.h">
-      <Filter>Header Files\Exceptions</Filter>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files\ManagableItems</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

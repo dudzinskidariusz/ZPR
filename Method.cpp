@@ -1,4 +1,4 @@
-#include "Method.h"
+#include "method.h"
 #include <boost/unordered_map.hpp>
 
 typedef boost::unordered_map<string, Item*> MethodMap;
@@ -19,7 +19,6 @@ Method::Method(const Method& m){
 
 
 Method::~Method(void){
-	//delete params;
 }
 
 void Method::setName(string name){
@@ -40,12 +39,4 @@ Item* Method::getParam(string key){
 
 boost::unordered_map<string, Item*>* Method::getParams(){
 	return &params;
-}
-
-string Method::getParamNames(){
-	string names;
-	for(boost::unordered_map<string, Item*>::iterator it =params.begin();it != params.end(); ++it){
-		names = " " + it->first + " ";
-	}
-	return names;
 }

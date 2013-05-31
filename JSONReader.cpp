@@ -1,9 +1,9 @@
-#include "JSONReader.h"
+#include "jsonreader.h"
 #include <boost/foreach.hpp>
 #include <vector>
 #include "iostream"
-#include "Method.h"
-#include "Item.h"
+#include "method.h"
+#include "item.h"
 //#include "json.h"
 
 using namespace Json;
@@ -52,27 +52,6 @@ Item* JSONReader::readItem(Value value){
 		return item;
 	
 }
-
-string JSONReader::writeItems(ItemVector* vector){
-
-	Value root; 
-	root["indent"]["length"] = 1;
-root["indent"]["use_space"] = 12;
-
-StyledWriter writer;
-// Make a new JSON document for the configuration. Preserve original comments.
-std::string outputConfig = writer.write( root );
-
-// You can also use streams.  This will put the contents of any JSON
-// stream at a particular sub-value, if you'd like.
-
-// And you can write to a stream, using the StyledWriter automatically.
-std::cout << root;
-
-return "";
-
-}
-
 
 MethodVector* JSONReader::readMethods(string methodString){
 		MethodVector* vect = new MethodVector();

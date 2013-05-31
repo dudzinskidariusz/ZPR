@@ -1,6 +1,6 @@
 
-#include "ItemFactory.h"
-#include "Item.h"
+#include "itemfactory.h"
+#include "item.h"
 #include <boost\unordered_map.hpp>
 
 using namespace std;

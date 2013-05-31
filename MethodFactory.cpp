@@ -1,4 +1,4 @@
-#include "MethodFactory.h"
+#include "methodfactory.h"
 
 #include <boost\unordered_map.hpp>
 
