@@ -1,0 +1,164 @@
+\hypertarget{class_item}{\section{\-Item \-Class \-Reference}
+\label{class_item}\index{\-Item@{\-Item}}
+}
+
+
+\hyperlink{class_item}{\-Item}.  
+
+
+
+
+{\ttfamily \#include $<$item.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_item_aad33eaa7360e0a10671cf9f106d3c15e}{\-Item} (string name)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_item}{\-Item} \-Constructor setting the name of item. \end{DoxyCompactList}\item 
+\hypertarget{class_item_ade7e491f0f1fb579f98c28f7079ace05}{\hyperlink{class_item_ade7e491f0f1fb579f98c28f7079ace05}{\-Item} (const \hyperlink{class_item}{\-Item} \&i)}\label{class_item_ade7e491f0f1fb579f98c28f7079ace05}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_item}{\-Item} \-Copying constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_item}{\-Item} $\ast$ \hyperlink{class_item_a39b07e752ad862f82976715691bb8651}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone \-Clones an item \end{DoxyCompactList}\item 
+\hypertarget{class_item_a97a8192f17c60d0a628496a68131010e}{\hyperlink{class_item_a97a8192f17c60d0a628496a68131010e}{$\sim$\-Item} (void)}\label{class_item_a97a8192f17c60d0a628496a68131010e}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_item}{\-Item} \-Simple destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_item_a5dcdff1db4c66ca22bd6a3f826c69644}{set\-Name} (string name)
+\begin{DoxyCompactList}\small\item\em set\-Name \-Sets item name \end{DoxyCompactList}\item 
+string \hyperlink{class_item_a63d7f2148b699e539aae354b01559811}{get\-Name} ()
+\begin{DoxyCompactList}\small\item\em get\-Name \-Gets \-Name \end{DoxyCompactList}\item 
+void \hyperlink{class_item_a8bc2de5cc28b66382c88b617658ef75b}{add\-Param} (string key, string value=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em add\-Param \-Adds a new parameter to the map \end{DoxyCompactList}\item 
+string \hyperlink{class_item_a3605775840abc78a71bd206b7408d3cf}{get\-Param} (string key)
+\begin{DoxyCompactList}\small\item\em get\-Param \-Returns parameter value \end{DoxyCompactList}\item 
+\-Item\-Map $\ast$ \hyperlink{class_item_a3cd3359723df8ed59f9f8de97c773d7b}{get\-Params} ()
+\begin{DoxyCompactList}\small\item\em get\-Params \-Returns parameters map \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{class_item}{\-Item}. 
+
+\-Class is a prototype, represents an item available from the remote application contains it's name and atributes 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_item_aad33eaa7360e0a10671cf9f106d3c15e}{\index{\-Item@{\-Item}!\-Item@{\-Item}}
+\index{\-Item@{\-Item}!Item@{\-Item}}
+\subsubsection[{\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Item\-::\-Item} (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_item_aad33eaa7360e0a10671cf9f106d3c15e}
+
+
+\hyperlink{class_item}{\-Item} \-Constructor setting the name of item. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_item_a8bc2de5cc28b66382c88b617658ef75b}{\index{\-Item@{\-Item}!add\-Param@{add\-Param}}
+\index{add\-Param@{add\-Param}!Item@{\-Item}}
+\subsubsection[{add\-Param}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Item\-::add\-Param} (
+\begin{DoxyParamCaption}
+\item[{string}]{key, }
+\item[{string}]{value = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_item_a8bc2de5cc28b66382c88b617658ef75b}
+
+
+add\-Param \-Adds a new parameter to the map 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em key} & parameter name \\
+\hline
+{\em value} & parameter value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_item_a39b07e752ad862f82976715691bb8651}{\index{\-Item@{\-Item}!clone@{clone}}
+\index{clone@{clone}!Item@{\-Item}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Item} $\ast$ {\bf \-Item\-::clone} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_item_a39b07e752ad862f82976715691bb8651}
+
+
+clone \-Clones an item 
+
+\begin{DoxyReturn}{\-Returns}
+item 
+\end{DoxyReturn}
+\hypertarget{class_item_a63d7f2148b699e539aae354b01559811}{\index{\-Item@{\-Item}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!Item@{\-Item}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-Item\-::get\-Name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_item_a63d7f2148b699e539aae354b01559811}
+
+
+get\-Name \-Gets \-Name 
+
+\begin{DoxyReturn}{\-Returns}
+name 
+\end{DoxyReturn}
+\hypertarget{class_item_a3605775840abc78a71bd206b7408d3cf}{\index{\-Item@{\-Item}!get\-Param@{get\-Param}}
+\index{get\-Param@{get\-Param}!Item@{\-Item}}
+\subsubsection[{get\-Param}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-Item\-::get\-Param} (
+\begin{DoxyParamCaption}
+\item[{string}]{key}
+\end{DoxyParamCaption}
+)}}\label{class_item_a3605775840abc78a71bd206b7408d3cf}
+
+
+get\-Param \-Returns parameter value 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em key} & parameter name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+value 
+\end{DoxyReturn}
+\hypertarget{class_item_a3cd3359723df8ed59f9f8de97c773d7b}{\index{\-Item@{\-Item}!get\-Params@{get\-Params}}
+\index{get\-Params@{get\-Params}!Item@{\-Item}}
+\subsubsection[{get\-Params}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::unordered\-\_\-map$<$ string, string $>$ $\ast$ {\bf \-Item\-::get\-Params} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_item_a3cd3359723df8ed59f9f8de97c773d7b}
+
+
+get\-Params \-Returns parameters map 
+
+\begin{DoxyReturn}{\-Returns}
+params 
+\end{DoxyReturn}
+\hypertarget{class_item_a5dcdff1db4c66ca22bd6a3f826c69644}{\index{\-Item@{\-Item}!set\-Name@{set\-Name}}
+\index{set\-Name@{set\-Name}!Item@{\-Item}}
+\subsubsection[{set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Item\-::set\-Name} (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_item_a5dcdff1db4c66ca22bd6a3f826c69644}
+
+
+set\-Name \-Sets item name 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+item.\-h\item 
+item.\-cpp\end{DoxyCompactItemize}
